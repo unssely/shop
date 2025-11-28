@@ -10,8 +10,40 @@
     <div class="grid grid-rows-[auto 1fr auto] min-h-full container m-auto">
       <header>
         <h1 class="text-6xl text-blue-950 font-bold uppercase">CASIO</h1>
+       
       </header>
-      <main>
+      <main class="flex">
+        <div class="filter">
+          <h2>Фильтрация</h2>
+          <form id="form-filter" action="">
+            <div class="form_item">
+              <div>
+                <label for="search">Введите название модели</label>
+              </div>
+              <div>
+                <input id="search" name="search" type="text" placeholder="поиск" required>
+              </div>
+            <div class="form_item">
+              <h3>Цвет</h3>
+
+              <div class="filter-color">
+                <div class="filter-color_item">
+                  <input class="color-radio" type="radio" name="color" id="color-red">
+                  <label class="color-lebel" for="color-red" style="background-color: red;" tabindex="0"></label>
+                </div>
+                <div class="filter-color_item">
+                  <input class="color-radio" type="radio" name="color" id="color-black">
+                  <label class="color-lebel" for="color-black" style="background-color: black;" tabindex="0" ></label>
+                </div>
+              </div>
+
+            </div>
+            </div>
+            <div class="form_item">
+              <input class="form__btn" type="submit" value="искать">
+            </div>
+          </form>
+        </div>
         <div class="catalog grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3">
           <div class="card flex flex-col ">
             <div class="bg-gray-200 p-8 relative">

@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 
 
     let swiper = new Swiper(".mySwiper", {
+      modules:[Navigation, Pagination],
       slidesPerView: 4,
       spaceBetween: 30,
       centeredSlides: true,
