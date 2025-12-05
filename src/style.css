@@ -36,15 +36,15 @@
 
 /*----------forms----------*/
 .form_item input{
-  border:darkblue 2px solid;
+  border:black 2px solid;
   background-color: rgb(212, 212, 212);
-  color: darkblue;
+  color: black;
   transition: 0.3s;
 }
-.form_item input:hover {
-  box-shadow: 0px 0px 15px 0px darkblue;
+/* .form_item input:hover {
+  box-shadow: 0px 0px 15px 0px black;
 
-}
+} */
 
 .form_item input:focus{
   outline: 1px solid black;
@@ -63,7 +63,7 @@
   box-shadow: none;
 }
  .form_item input[type=submit]{
-  background-color: darkblue;
+  background-color: black;
   color: white;
  }
 
@@ -73,8 +73,8 @@
  }
 
  .form_item input[type=text]:invalid{
-  border-color: darkred;
-  background-color: rgb(131, 83, 83);
+  border-color: black;
+  background-color: white;
  }
 
 .form_item .color-radio{

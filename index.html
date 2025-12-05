@@ -1,175 +1,276 @@
 ﻿<!doctype html>
 <html lang="en" class="h-full">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shop</title>
-  </head>
-  <body class=" bg-gray-50 text-black-100 h-full">
-    <div class="grid grid-rows-[auto 1fr auto] min-h-full container m-auto">
-      <header>
-        <h1 class="text-6xl text-blue-950 font-bold uppercase">CASIO</h1>
-       
-      </header>
-      <main class="flex">
-        <div class="filter">
-          <h2>Фильтрация</h2>
-          <form id="form-filter" action="">
-            <div class="form_item">
-              <div>
-                <label for="search">Введите название модели</label>
-              </div>
-              <div>
-                <input id="search" name="search" type="text" placeholder="поиск" required>
-              </div>
-            <div class="form_item">
-              <h3>Цвет</h3>
 
-              <div class="filter-color">
-                <div class="filter-color_item">
-                  <input class="color-radio" type="radio" name="color" id="color-red">
-                  <label class="color-lebel" for="color-red" style="background-color: red;" tabindex="0"></label>
-                </div>
-                <div class="filter-color_item">
-                  <input class="color-radio" type="radio" name="color" id="color-black">
-                  <label class="color-lebel" for="color-black" style="background-color: black;" tabindex="0" ></label>
-                </div>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>shop</title>
+</head>
 
+<body class=" bg-gray-50 text-black-100 h-full">
+  <div class="grid grid-rows-[auto 1fr auto] min-h-full container m-auto">
+    <header>
+      <h1 class="text-6xl text-blue-950 font-bold uppercase">CASIO</h1>
+
+    </header>
+    <main class="flex">
+      <div class="filter">
+        <h3 class="text-lg font-semibold text-heading mb-3">Filtration</h3>
+        <form id="form-filter" action="">
+          <div class="form_item">
+            <div>
+              <label for="search">Введите название модели</label>
             </div>
+            <div>
+              <input id="search" name="search" type="text" placeholder="поиск" required>
             </div>
+          </div>
+          <div class="form_item">
             <div class="form_item">
               <input class="form__btn" type="submit" value="искать">
             </div>
-          </form>
-        </div>
-        <div class="catalog grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3">
-          <div class="card flex flex-col ">
+            <h3 class="text-lg font-semibold text-heading mb-3">Bezel color</h3>
+
+            <div class="filter-color" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-black">
+                <label class="color-lebel" for="color-black" style="background-color: rgb(0, 0, 0);"
+                  tabindex="0"></label>
+              </div>
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-blue">
+                <label class="color-lebel" for="color-blue" style="background-color: #3599ff;" tabindex="0"></label>
+              </div>
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-green">
+                <label class="color-lebel" for="color-green" style="background-color: #349934;" tabindex="0"></label>
+              </div>
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-red">
+                <label class="color-lebel" for="color-red" style="background-color: #ff0016;" tabindex="0"></label>
+              </div>
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-beige">
+                <label class="color-lebel" for="color-beige" style="background-color: #cc9965;" tabindex="0"></label>
+              </div>
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-purple">
+                <label class="color-lebel" for="color-purple" style="background-color: #801381;" tabindex="0"></label>
+              </div>
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-white">
+                <label class="color-lebel" for="color-white" style="background-color: white;" tabindex="0"></label>
+              </div>
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-grey">
+                <label class="color-lebel" for="color-grey" style="background-color: #ccc;" tabindex="0"></label>
+              </div>
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-yellow">
+                <label class="color-lebel" for="color-yellow" style="background-color: #feff10;" tabindex="0"></label>
+              </div>
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-pink">
+                <label class="color-lebel" for="color-pink" style="background-color: #ffc1cc;" tabindex="0"></label>
+              </div>
+              <div class="filter-color_item">
+                <input class="color-radio" type="radio" name="color" id="color-skeleton">
+                <label class="color-lebel" for="color-skeleton" style="background-color: #f2f3f2;" tabindex="0"></label>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <h3 class="text-lg font-semibold text-heading mb-3">Sort</h3>
+
+              <div class="space-y-2">
+                <div class="flex items-center">
+                  <input id="default-radio-1" type="radio" value="" name="default-radio"
+                    class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+                  <label for="default-radio-1" class="select-none ms-2 text-sm font-medium text-heading">Newest</label>
+                </div>
+
+                <div class="flex items-center">
+                  <input checked id="default-radio-2" type="radio" value="" name="default-radio"
+                    class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+                  <label for="default-radio-2"
+                    class="select-none ms-2 text-sm font-medium text-heading">Price:High-Low</label>
+                </div>
+
+                <div class="flex items-center">
+                  <input id="default-radio-3" type="radio" value="" name="default-radio"
+                    class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+                  <label for="default-radio-3"
+                    class="select-none ms-2 text-sm font-medium text-heading">Price:Low-High</label>
+                </div>
+
+                <div class="flex items-center">
+                  <input id="default-radio-4" type="radio" value="" name="default-radio"
+                    class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+                  <label for="default-radio-4"
+                    class="select-none ms-2 text-sm font-medium text-heading">Weight:Heavy-Light</label>
+                </div>
+
+                <div class="flex items-center">
+                  <input id="default-radio-5" type="radio" value="" name="default-radio"
+                    class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none">
+                  <label for="default-radio-5"
+                    class="select-none ms-2 text-sm font-medium text-heading">Weight:Light-Heavy</label>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <button type="button"
+                class="text-heading bg-gray-200 border-none font-medium text-sm px-4 py-2.5 rounded-none mb-2 hover:border-2 hover:border-black active:border-2 active:border-black focus:border-2 focus:border-black">Brand</button>
+              <button type="button"
+                class="text-heading bg-gray-200 border-none font-medium text-sm px-4 py-2.5 rounded-none mb-2 hover:border-2 hover:border-black active:border-2 active:border-black focus:border-2 focus:border-black">Gray</button>
+              <button type="button"
+                class="text-heading bg-gray-200 border-none font-medium text-sm px-4 py-2.5 rounded-none mb-2 hover:border-2 hover:border-black active:border-2 active:border-black focus:border-2 focus:border-black">Success</button>
+              <button type="button"
+                class="text-heading bg-gray-200 border-none font-medium text-sm px-4 py-2.5 rounded-none mb-2 hover:border-2 hover:border-black active:border-2 active:border-black focus:border-2 focus:border-black">Danger</button>
+              <button type="button"
+                class="text-heading bg-gray-200 border-none font-medium text-sm px-4 py-2.5 rounded-none hover:border-2 hover:border-black active:border-2 active:border-black focus:border-2 focus:border-black">Warning</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="catalog grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3">
+        <div class="card flex flex-col ">
+          <a href="card1.html" target="_blank">
             <div class="bg-gray-200 p-8 relative">
               <img class="" src="/img/image1.avif" alt="часы">
               <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
-              <div class="absolute top-2 right-4 flex flex-col"><button
-                class="cursor-pointer"><i class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button></div>
+              <div class="absolute top-2 right-4 flex flex-col"><button class="cursor-pointer"><i
+                    class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button>
+              </div>
             </div>
             <p class="text-sm">G-SHOCK</p>
             <h3 class="font-bold text-amber-900">
               <a href="#" class="inline-block text-stone-950 text-xl">
                 GMA-S145PK-4A
-              </a>  
+              </a>
             </h3>
-          </div>
-                    <div class="card flex flex-col ">
-            <div class="bg-gray-200 p-8 relative">
-              <img class="" src="/img/image2.avif" alt="часы">
-              <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
-              <div class="absolute top-2 right-4 flex flex-col"><button
-                class="cursor-pointer"><i class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button></div>
+          </a>
+        </div>
+        <div class="card flex flex-col ">
+          <div class="bg-gray-200 p-8 relative">
+            <img class="" src="/img/image2.avif" alt="часы">
+            <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
+            <div class="absolute top-2 right-4 flex flex-col"><button class="cursor-pointer"><i
+                  class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button>
             </div>
-            <p class="text-sm">CASIO</p>
-            <h3 class="font-bold text-amber-900">
-              <a href="#" class="inline-block text-stone-950 text-xl">
-                LTP-1303DD-7AV
-              </a>  
-            </h3>
           </div>
-                    <div class="card flex flex-col ">
-            <div class="bg-gray-200 p-8 relative">
-              <img class="" src="/img/image3.avif" alt="часы">
-              <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
-              <div class="absolute top-2 right-4 flex flex-col"><button
-                class="cursor-pointer"><i class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button></div>
+          <p class="text-sm">CASIO</p>
+          <h3 class="font-bold text-amber-900">
+            <a href="#" class="inline-block text-stone-950 text-xl">
+              LTP-1303DD-7AV
+            </a>
+          </h3>
+        </div>
+        <div class="card flex flex-col ">
+          <div class="bg-gray-200 p-8 relative">
+            <img class="" src="/img/image3.avif" alt="часы">
+            <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
+            <div class="absolute top-2 right-4 flex flex-col"><button class="cursor-pointer"><i
+                  class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button>
             </div>
-            <p class="text-sm">CASIO</p>
-            <h3 class="font-bold text-amber-900">
-              <a href="#" class="inline-block text-stone-950 text-xl">
-                MTP-M306D-7AV
-              </a>  
-            </h3>
           </div>
-                    <div class="card flex flex-col ">
-            <div class="bg-gray-200 p-8 relative">
-              <img class="" src="/img/image4.avif" alt="часы">
-              <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
-              <div class="absolute top-2 right-4 flex flex-col"><button
-                class="cursor-pointer"><i class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button></div>
+          <p class="text-sm">CASIO</p>
+          <h3 class="font-bold text-amber-900">
+            <a href="#" class="inline-block text-stone-950 text-xl">
+              MTP-M306D-7AV
+            </a>
+          </h3>
+        </div>
+        <div class="card flex flex-col ">
+          <div class="bg-gray-200 p-8 relative">
+            <img class="" src="/img/image4.avif" alt="часы">
+            <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
+            <div class="absolute top-2 right-4 flex flex-col"><button class="cursor-pointer"><i
+                  class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button>
             </div>
-            <p class="text-sm">CASIO</p>
-            <h3 class="font-bold text-amber-900">
-              <a href="#" class="inline-block text-stone-950 text-xl">
-                LTP-B166D-7AV
-              </a>  
-            </h3>
           </div>
-                    <div class="card flex flex-col ">
-            <div class="bg-gray-200 p-8 relative">
-              <img class="" src="/img/image5.avif" alt="часы">
-              <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
-              <div class="absolute top-2 right-4 flex flex-col"><button
-                class="cursor-pointer"><i class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button></div>
+          <p class="text-sm">CASIO</p>
+          <h3 class="font-bold text-amber-900">
+            <a href="#" class="inline-block text-stone-950 text-xl">
+              LTP-B166D-7AV
+            </a>
+          </h3>
+        </div>
+        <div class="card flex flex-col ">
+          <div class="bg-gray-200 p-8 relative">
+            <img class="" src="/img/image5.avif" alt="часы">
+            <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
+            <div class="absolute top-2 right-4 flex flex-col"><button class="cursor-pointer"><i
+                  class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button>
             </div>
-            <p class="text-sm">CASIO</p>
-            <h3 class="font-bold text-amber-900">
-              <a href="#" class="inline-block text-stone-950 text-xl">
-                LF-30W-1A
-              </a>  
-            </h3>
           </div>
-                    <div class="card flex flex-col ">
-            <div class="bg-gray-200 p-8 relative">
-              <img class="" src="/img/image6.avif" alt="часы">
-              <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
-              <div class="absolute top-2 right-4 flex flex-col"><button
-                class="cursor-pointer"><i class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button></div>
+          <p class="text-sm">CASIO</p>
+          <h3 class="font-bold text-amber-900">
+            <a href="#" class="inline-block text-stone-950 text-xl">
+              LF-30W-1A
+            </a>
+          </h3>
+        </div>
+        <div class="card flex flex-col ">
+          <div class="bg-gray-200 p-8 relative">
+            <img class="" src="/img/image6.avif" alt="часы">
+            <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
+            <div class="absolute top-2 right-4 flex flex-col"><button class="cursor-pointer"><i
+                  class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button>
             </div>
-            <p class="text-sm">G-SHOCK</p>
-            <h3 class="font-bold text-amber-900">
-              <a href="#" class="inline-block text-stone-950 text-xl">
-                GA-010CE-2A
-              </a>  
-            </h3>
           </div>
-                    <div class="card flex flex-col ">
-            <div class="bg-gray-200 p-8 relative">
-              <img class="" src="/img/image7.avif" alt="часы">
-              <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
-              <div class="absolute top-2 right-4 flex flex-col"><button
-                class="cursor-pointer"><i class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button></div>
+          <p class="text-sm">G-SHOCK</p>
+          <h3 class="font-bold text-amber-900">
+            <a href="#" class="inline-block text-stone-950 text-xl">
+              GA-010CE-2A
+            </a>
+          </h3>
+        </div>
+        <div class="card flex flex-col ">
+          <div class="bg-gray-200 p-8 relative">
+            <img class="" src="/img/image7.avif" alt="часы">
+            <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
+            <div class="absolute top-2 right-4 flex flex-col"><button class="cursor-pointer"><i
+                  class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button>
             </div>
-            <p class="text-sm">G-STEEL</p>
-            <h3 class="font-bold text-amber-900">
-              <a href="#" class="inline-block text-stone-950 text-xl">
-                GBM-2100A-4B
-              </a>  
-            </h3>
           </div>
-                    <div class="card flex flex-col ">
-            <div class="bg-gray-200 p-8 relative">
-              <img class="" src="/img/image8.avif" alt="часы">
-              <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
-              <div class="absolute top-2 right-4 flex flex-col"><button
-                class="cursor-pointer"><i class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button></div>
+          <p class="text-sm">G-STEEL</p>
+          <h3 class="font-bold text-amber-900">
+            <a href="#" class="inline-block text-stone-950 text-xl">
+              GBM-2100A-4B
+            </a>
+          </h3>
+        </div>
+        <div class="card flex flex-col ">
+          <div class="bg-gray-200 p-8 relative">
+            <img class="" src="/img/image8.avif" alt="часы">
+            <div class="new absolute bg-gray-50 px-4 text-xs  top-2 left-2">NEW</div>
+            <div class="absolute top-2 right-4 flex flex-col"><button class="cursor-pointer"><i
+                  class="bi bi-suit-heart-fill transition ease-in-out hover:text-red-500 focus:text-red-500"></i></button>
             </div>
-            <p class="text-sm">CASIO</p>
-            <h3 class="font-bold text-amber-900">
-              <a href="#" class="inline-block text-stone-950 text-xl">
-                MTP-M110D-7AV
-              </a>  
-            </h3>
           </div>
-      
+          <p class="text-sm">CASIO</p>
+          <h3 class="font-bold text-amber-900">
+            <a href="#" class="inline-block text-stone-950 text-xl">
+              MTP-M110D-7AV
+            </a>
+          </h3>
+        </div>
 
-          
-          </div>
-      </main>
-      <footer>
-
-      
 
 
-        <p>&copy; Шушарина Юля, 2025 г.</p>
-      </footer>
-    </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+      </div>
+    </main>
+    <footer>
+
+
+
+
+      <p>&copy; Шушарина Юля, 2025 г.</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
