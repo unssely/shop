@@ -68,8 +68,8 @@
  }
 
  .form_item input[type=text]:valid{
-  border-color: darkgreen;
-  background-color: green;
+  
+  background-color: lightgray;
  }
 
  .form_item input[type=text]:invalid{
